@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== EU ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_Pistol</defName>
+        <label>P33 Pereira</label>
+        <description>The EU's primary sidearm, while accurate over short range, it should only be considered a last resort in today's confrontation.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_Pistol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedLight</li>
+            <li>ShortShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>2.96</Bulk>
+            <Mass>1.47</Mass>
+            <SwayFactor>1.48</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>0.7</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+            <WorkToMake>5500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>2.88</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+                <warmupTime>0.6</warmupTime>
+                <range>16</range>
+                <soundCast>Shot_EU_Pistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>8</magazineSize>
+                <reloadTime>4.6</reloadTime>
+                <ammoSet>AmmoSet_44Magnum</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>Snapshot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_EU_Sidearm</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>0.77</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.20,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== PAC ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_Pistol</defName>
+        <label>Takao T20</label>
+        <description>The PAC's primary sidearm, while accurate over short range, it should only be considered a last resort in today's confrontation.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_Pistol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedLight</li>
+            <li>ShortShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>2.05</Bulk>
+            <Mass>0.83</Mass>
+            <SwayFactor>1.52</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>0.8</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+            <WorkToMake>8000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>25</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>3.13</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>16</range>
+                <soundCast>Shot_PAC_Pistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>12</magazineSize>
+                <reloadTime>4</reloadTime>
+                <ammoSet>AmmoSet_45ACP</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>Snapshot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_PAC_Sidearm</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>0.77</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.1,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

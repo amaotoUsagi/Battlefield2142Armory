@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== EU ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_Sniper</defName>
+        <label>Morretti SR4</label>
+        <description>The Morretti SR4 (Sniper Rifle 4) is a next generation sniping medium utilizing a semiautomatic configuration, high caliber round and telescopic sight to effectively assail long-range targets.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_Sniper</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>LongShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>11.43</Bulk>
+            <Mass>5.35</Mass>
+            <SwayFactor>1.80</SwayFactor>
+            <ShotSpread>0.02</ShotSpread>
+            <SightsEfficiency>2.72</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.42</RangedWeapon_Cooldown>
+            <WorkToMake>39500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>70</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>3.75</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_50BMG_FMJ</defaultProjectile>
+                <ticksBetweenBurstShots>120</ticksBetweenBurstShots>
+                <warmupTime>1.7</warmupTime>
+                <range>75</range>
+                <soundCast>Shot_EU_Sniper</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>5</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_50BMG</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_EU_Sniper</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+                <li>PrecisionRifling</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.25,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== PAC ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_Sniper</defName>
+        <label>Park 52</label>
+        <description>The Park 52 Sniper Rifle has a high-magnification scope which allows the sniper a long-range visual field for the semi-automatic highly accurate weapon.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_Sniper</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.6</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>LongShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>14.20</Bulk>
+            <Mass>6.75</Mass>
+            <SwayFactor>2.22</SwayFactor>
+            <ShotSpread>0.01</ShotSpread>
+            <SightsEfficiency>2.72</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.44</RangedWeapon_Cooldown>
+            <WorkToMake>43500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>95</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>4.33</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_145x114mm_FMJ</defaultProjectile>
+                <ticksBetweenBurstShots>120</ticksBetweenBurstShots>
+                <warmupTime>1.7</warmupTime>
+                <range>75</range>
+                <soundCast>Shot_PAC_Sniper</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>5</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_145x114mm</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_PAC_Sniper</li>
+            <li>Bipod_AMR</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+                <li>PrecisionRifling</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.3,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== Adv ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_Sniper</defName>
+        <label>Zeller-H Advanced Sniper Rifle</label>
+        <description>The Zeller-H Advanced Sniper Rifle's higher caliber ammunition gives this anti-material sniper rifle a highly enhanced stopping power.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_Sniper</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.8</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>LongShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>17.70</Bulk>
+            <Mass>12.50</Mass>
+            <SwayFactor>2.13</SwayFactor>
+            <ShotSpread>0.01</ShotSpread>
+            <SightsEfficiency>3.20</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.63</RangedWeapon_Cooldown>
+            <WorkToMake>43500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>95</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>4.03</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_23x152mmB_AP</defaultProjectile>
+                <ticksBetweenBurstShots>120</ticksBetweenBurstShots>
+                <warmupTime>3.8</warmupTime>
+                <range>86</range>
+                <soundCast>Shot_Adv_Sniper</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>3</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_23x152mmB</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_Adv_Sniper</li>
+            <li>Bipod_AMR</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+                <li>PrecisionRifling</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.4,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

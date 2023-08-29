@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== Rocket Cases for Mitchell AV-18 and Sudnik VP ========================== -->
+
+	<ThingCategoryDef>
+		<defName>AmmoMissileCases</defName>
+		<label>Missile Cases</label>
+		<parent>AmmoRockets</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRocket</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MitchellAV18</defName>
+		<label>Mitchell AV-18</label>
+		<ammoTypes>
+			<Ammo_Mitchell_HEAT>Bullet_Mitchell_HEAT</Ammo_Mitchell_HEAT>
+			<Ammo_Mitchell_ASM>Bullet_Mitchell_ASM</Ammo_Mitchell_ASM>
+			<Ammo_Mitchell_Frag>Bullet_Mitchell_Frag</Ammo_Mitchell_Frag>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_SudnikVP</defName>
+		<label>Sudnik VP</label>
+		<ammoTypes>
+			<Ammo_Sudnik_HEAT>Bullet_Sudnik_HEAT</Ammo_Sudnik_HEAT>
+			<Ammo_Sudnik_ASM>Bullet_Sudnik_ASM</Ammo_Sudnik_ASM>
+			<Ammo_Sudnik_Frag>Bullet_Sudnik_Frag</Ammo_Sudnik_Frag>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="MitchellAV18Base" ParentName="MediumAmmoBase" Abstract="True">
+		<description>A compact, specialized case used for launching rockets. Due to how simplified most weaponry made on the Rim, it lacks the guidance package stated in its blueprints.</description>
+		<statBases>
+			<Mass>4.6</Mass>
+			<Bulk>4.78</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_TableMachining</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoMissileCases</li>
+		</thingCategories>
+		<stackLimit>25</stackLimit>
+		<cookOffFlashScale>40</cookOffFlashScale>
+		<cookOffSound>MortarBomb_Explode</cookOffSound>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Mitchell_HEAT</defName>
+		<label>Mitchell AV-18 (HEAT)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Mitchell/Mitchell_HEAT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>56.65</MarketValue>
+		</statBases>
+		<ammoClass>RocketHEAT</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Mitchell_ASM</defName>
+		<label>Mitchell AV-18 (Anti-Structure Munition)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Mitchell/Mitchell_ASM</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>89.38</MarketValue>
+		</statBases>
+		<ammoClass>RocketThermobaric</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Mitchell_Frag</defName>
+		<label>Mitchell AV-18 (Frag)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Mitchell/Mitchell_Frag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>50.45</MarketValue>
+		</statBases>
+		<ammoClass>RocketFrag</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Sudnik_HEAT</defName>
+		<label>Sudnik AV-18 (HEAT)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Sudnik/Sudnik_HEAT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>56.65</MarketValue>
+		</statBases>
+		<ammoClass>RocketHEAT</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Sudnik_ASM</defName>
+		<label>Sudnik AV-18 (Anti-Structure Munition)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Sudnik/Sudnik_ASM</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>89.38</MarketValue>
+		</statBases>
+		<ammoClass>RocketThermobaric</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MitchellAV18Base">
+		<defName>Ammo_Sudnik_Frag</defName>
+		<label>Sudnik AV-18 (Frag)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/Sudnik/Sudnik_Frag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>50.45</MarketValue>
+		</statBases>
+		<ammoClass>RocketFrag</ammoClass>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="BaseSudnikRocket" ParentName="BaseExplosiveBullet" Abstract="true">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>50</speed>
+			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+			<dropsCasings>false</dropsCasings>
+			<airborneSuppressionFactor>0.83</airborneSuppressionFactor>
+			<suppressionFactor>3.0</suppressionFactor>
+			<dangerFactor>2.0</dangerFactor>
+			<soundImpact>Explosion_Mid</soundImpact>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="BaseMitchellRocket" ParentName="BaseSudnikRocket" Abstract="true">
+		<graphicData>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+    		<pelletCount>4</pelletCount>
+      		<spreadMult>2</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMitchellRocket">
+		<defName>Bullet_Mitchell_HEAT</defName>
+		<label>Micro-rocket (HEAT)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_HEAT_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+    		<damageDef>Bullet</damageDef>
+			<damageAmountBase>97</damageAmountBase>
+			<armorPenetrationSharp>610</armorPenetrationSharp>
+			<armorPenetrationBlunt>31.297</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>26</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1.4</explosiveRadius>
+				<explosionSound>Explosion_Mid</explosionSound>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>2</Fragment_Large>
+					<Fragment_Small>5</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMitchellRocket">
+		<defName>Bullet_Mitchell_ASM</defName>
+		<label>Micro-rocket (ASM)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_ASM_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Thermobaric</damageDef>
+			<damageAmountBase>44</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>4.4</explosionRadius>
+			<soundExplode>Explosion_Huge</soundExplode>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMitchellRocket">
+		<defName>Bullet_Mitchell_Frag</defName>
+		<label>Micro-rocket (Frag)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_Frag_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>1.5</explosionRadius>
+			<soundExplode>Explosion_Small</soundExplode>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>20</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseSudnikRocket">
+		<defName>Bullet_Sudnik_HEAT</defName>
+		<label>Sudnik Rocket (HEAT)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Sudnik_HEAT_Projectile</texPath>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+    		<damageDef>Bullet</damageDef>
+			<damageAmountBase>387</damageAmountBase>
+			<armorPenetrationSharp>610</armorPenetrationSharp>
+			<armorPenetrationBlunt>31.297</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>104</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1.4</explosiveRadius>
+				<explosionSound>Explosion_Mid</explosionSound>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>7</Fragment_Large>
+					<Fragment_Small>18</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseSudnikRocket">
+		<defName>Bullet_Sudnik_ASM</defName>
+		<label>Sudnik Rocket (ASM)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Sudnik_ASM_Projectile</texPath>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Thermobaric</damageDef>
+			<damageAmountBase>175</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>4.4</explosionRadius>
+			<soundExplode>Explosion_Huge</soundExplode>
+			<explosionEffect>GiantExplosion</explosionEffect>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseSudnikRocket">
+		<defName>Bullet_Sudnik_Frag</defName>
+		<label>Sudnik Rocket (Frag)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Sudnik_Frag_Projectile</texPath>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>69</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>1.5</explosionRadius>
+			<soundExplode>Explosion_Small</soundExplode>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>80</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_Mitchell_HEAT</defName>
+		<label>make Mitchell AV-18 (HEAT) Rockets x5</label>
+		<description>Craft 5 Mitchell AV-18 (HEAT) Rockets.</description>
+		<jobString>Making Mitchell AV-18 (HEAT) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>46</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Mitchell_HEAT>5</Ammo_Mitchell_HEAT>
+		</products>
+		<workAmount>9400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_Mitchell_ASM</defName>
+		<label>make Mitchell AV-18 (ASM) Rockets x5</label>
+		<description>Craft 5 Mitchell AV-18 (ASM) Rockets.</description>
+		<jobString>Making Mitchell AV-18 (ASM) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>66</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>18</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Mitchell_ASM>5</Ammo_Mitchell_ASM>
+		</products>
+		<workAmount>16200</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_Mitchell_Frag</defName>
+		<label>make Mitchell AV-18 (Frag) Rockets x5</label>
+		<description>Craft 5 Mitchell AV-18 (Frag) Rockets.</description>
+		<jobString>Making Mitchell AV-18 (Frag) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>46</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Mitchell_Frag>5</Ammo_Mitchell_Frag>
+		</products>
+		<workAmount>8200</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_Sudnik_HEAT</defName>
+		<label>make Sudnik AV-18 (HEAT) Rockets x5</label>
+		<description>Craft 5 Sudnik AV-18 (HEAT) Rockets.</description>
+		<jobString>Making Sudnik AV-18 (HEAT) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>46</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Sudnik_HEAT>5</Ammo_Sudnik_HEAT>
+		</products>
+		<workAmount>9400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_Sudnik_ASM</defName>
+		<label>make Sudnik AV-18 (ASM) Rockets x5</label>
+		<description>Craft 5 Sudnik AV-18 (ASM) Rockets.</description>
+		<jobString>Making Sudnik AV-18 (ASM) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>66</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>18</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Sudnik_ASM>5</Ammo_Sudnik_ASM>
+		</products>
+		<workAmount>16200</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_Sudnik_Frag</defName>
+		<label>make Sudnik AV-18 (Frag) Rockets x5</label>
+		<description>Craft 5 Sudnik AV-18 (Frag) Rockets.</description>
+		<jobString>Making Sudnik AV-18 (Frag) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>46</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Sudnik_Frag>5</Ammo_Sudnik_Frag>
+		</products>
+		<workAmount>8200</workAmount>
+	</RecipeDef>
+
+  <!-- ==================== Rocket Cases End ========================== -->
+
+</Defs>

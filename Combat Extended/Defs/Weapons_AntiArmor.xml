@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ==================== EU Launcher ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_AV</defName>
+        <label>Mitchell AV-18</label>
+        <description>The Mitchell AV-18 Anti-Vehicle weapon is able to perforate even the most resilient cladding and cause extensive damage.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_AV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>9.83</Bulk>
+            <Mass>5.22</Mass>
+            <SwayFactor>1.42</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>2.07</SightsEfficiency>
+            <RangedWeapon_Cooldown>2.02</RangedWeapon_Cooldown>
+            <WorkToMake>17000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>65</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_EU_AV</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>15.31</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Mitchell_HEAT</defaultProjectile>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <warmupTime>1.96</warmupTime>
+                <range>75</range>
+                <minRange>5</minRange>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <soundCast>Shot_AV</soundCast>
+                <muzzleFlashScale>14</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>1</magazineSize>
+                <reloadTime>5.7</reloadTime>
+                <ammoSet>AmmoSet_MitchellAV18</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_AdvancedLaunchers</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.44</cooldownTime>
+                <armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+<!-- ==================== PAC Launcher ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_AV</defName>
+        <label>Sudnik VP</label>
+        <description>The Sudnik VP Anti-Vehicle weapon fires a single optically guided missile with a shaped charge capable of penetrating over two feet of steel plate.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_AV</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>10.20</Bulk>
+            <Mass>11.00</Mass>
+            <SwayFactor>2.03</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>2.07</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.41</RangedWeapon_Cooldown>
+            <WorkToMake>19500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>85</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_PAC_AV</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>10.55</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Sudnik_HEAT</defaultProjectile>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <warmupTime>1.96</warmupTime>
+                <range>75</range>
+                <minRange>5</minRange>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <soundCast>Shot_AV</soundCast>
+                <muzzleFlashScale>14</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>1</magazineSize>
+                <reloadTime>5.7</reloadTime>
+                <ammoSet>AmmoSet_SudnikVP</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_AdvancedLaunchers</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.44</cooldownTime>
+                <armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== Adv ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_HAVR</defName>
+        <label>Pilum H-AVR</label>
+        <description>The Pilum H-AVR (Heavy Anti Vehicle Rifle) lacks any guidance package, instead relying on the high speed of its projectile to eliminate targets.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_HAVR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>2</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>19.00</Bulk>
+            <Mass>18.00</Mass>
+            <SwayFactor>2.53</SwayFactor>
+            <ShotSpread>0.01</ShotSpread>
+            <SightsEfficiency>2.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+            <WorkToMake>37000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>125</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <Chemfuel>15</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>BF2142_Adv_AV</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>5.47</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_40x150mm_HEDP</defaultProjectile>
+                <!--defaultProjectile>Bullet_Adv_AV_AP</defaultProjectile-->
+                <warmupTime>2.89</warmupTime>
+                <range>86</range>
+                <soundCast>Shot_Adv_AVR</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>1</magazineSize>
+                <reloadTime>4</reloadTime>
+                <ammoSet>AmmoSet_40x150mm</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>AimedShot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>CE_Sidearm</li>
+            <li>CE_OneHandedWeapon</li>
+            <li>Bipod_ATR</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>2</power>
+                <cooldownTime>0.77</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.5,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

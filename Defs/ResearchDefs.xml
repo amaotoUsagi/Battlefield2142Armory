@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>BF2142_research</defName>
+		<label>BF2142</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef>
+		<defName>BF2142_Weapons</defName>
+		<label>22nd Century Weapons</label>
+		<tab>BF2142_research</tab>
+		<description>Unlocks weapons used back in the 22nd Century's Ice Age.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>GasOperation</li>
+		</prerequisites>
+		<researchViewY>1.0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BF2142_Armor</defName>
+		<label>22nd Century Armor</label>
+		<tab>BF2142_research</tab>
+		<description>Unlocks armors used back in the 22nd Century's Ice Age.</description>
+		<baseCost>6000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>ComplexClothing</li>
+		</prerequisites>
+		<researchViewY>2.0</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

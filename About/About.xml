@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Battlefield 2142 Armory</name>
+    <author>amaoto</author>
+    <url>null</url>
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+    <packageId>amaoto.Battlefield2142Armory</packageId>
+    <description>Adds Weapons from the game Battlefield 2142.\n Made for combat extended.\n Supports Muzzle Flash</description>
+    <modDependencies>
+        <li>
+            <packageId>CETeam.CombatExtended</packageId>
+            <displayName>Combat Extended</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadBefore>
+    </loadBefore>
+    <loadAfter>
+        <li>CETeam.CombatExtended</li>
+    </loadAfter>
+</ModMetaData>

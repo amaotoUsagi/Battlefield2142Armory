@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--=============== Item ====================-->
+    
+    <ThingDef ParentName="ResourceBase">
+        <defName>BF2142_Item_Mine_EMP</defName>
+        <label>II-14</label>
+        <description>The powerful, stationary cousin of the EMP grenade, the II-14 EMP Mine utilizes the same electromagnetic pulse methodology to immobilize nearby machinery.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Mines/II14</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>25</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>40</MaxHitPoints>
+            <Bulk>28.3</Bulk>
+            <MarketValue>189.63</MarketValue>
+            <Mass>5.2</Mass>
+            <Flammability>0.5</Flammability>
+            <DeteriorationRate>0.0</DeteriorationRate>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <costList>
+            <Steel>52</Steel>
+            <ComponentIndustrial>26</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <productCount>5</productCount>
+            <workAmount>20800</workAmount>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedAmmo</unfinishedThingDef>
+            <researchPrerequisites>
+                <li>BF2142_Weapons</li>
+                <li>IEDs</li>
+            </researchPrerequisites>
+        </recipeMaker>
+    </ThingDef>
+
+    <!--=============== Mine ====================-->
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>BF2142_Mine_EMP</defName>
+        <label>II-14</label>
+        <description>The powerful, stationary cousin of the EMP grenade, the II-14 EMP Mine utilizes the same electromagnetic pulse methodology to immobilize nearby machinery.</description>
+        <uiIconPath>BF2142/Things/Buildings/II14_Icon</uiIconPath>
+        <graphicData>
+            <texPath>BF2142/Things/Buildings/II14_Active</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawOffset>(0,0,-0.1)</drawOffset>
+        </graphicData>
+        <thingClass>Building_TrapExplosive</thingClass>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <rotatable>false</rotatable>
+        <tickerType>Normal</tickerType>
+        <stealable>false</stealable>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <pathCost>0</pathCost>
+        <canOverlapZones>true</canOverlapZones>
+        <repairEffect>RoofWork</repairEffect>
+        <constructEffect>RoofWork</constructEffect>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <statBases>
+            <Mass>4.1</Mass>
+            <MaxHitPoints>40</MaxHitPoints>
+            <MarketValue>37.93</MarketValue>
+            <WorkToBuild>60</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Beauty>-4</Beauty>
+            <TrapSpringChance>1.0</TrapSpringChance>
+        </statBases>
+        <costList>
+            <BF2142_Item_Mine_EMP>1</BF2142_Item_Mine_EMP>
+        </costList>
+        <designationCategory>Security</designationCategory>
+        <building>
+            <isTrap>true</isTrap>
+            <trapPeacefulWildAnimalsSpringChanceFactor>1.0</trapPeacefulWildAnimalsSpringChanceFactor>
+            <expandHomeArea>false</expandHomeArea>
+            <ai_chillDestination>false</ai_chillDestination>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+        </building>
+        <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+        <researchPrerequisites>
+            <li>BF2142_Weapons</li>
+            <li>IEDs</li>
+        </researchPrerequisites>
+        <placeWorkers>
+            <li>PlaceWorker_NeverAdjacentTrap</li>
+        </placeWorkers>
+        <resourcesFractionWhenDeconstructed>1.00</resourcesFractionWhenDeconstructed>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>7.9</explosiveRadius>
+                <explosiveDamageType>EMP</explosiveDamageType>
+                <damageAmountBase>244</damageAmountBase>
+                <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+                <explodeOnKilled>True</explodeOnKilled>
+                <wickTicks>0</wickTicks>
+                <explosionSound>Explosion_EMP</explosionSound>
+                <damageFalloff>false</damageFalloff>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

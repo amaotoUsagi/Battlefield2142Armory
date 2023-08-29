@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SoundDef>
+        <defName>Shot_EU_Pistol</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_Pistol_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.90~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_PAC_Pistol</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/PAC_Pistol_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.90~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+  <!-- Engineer -->
+
+    <SoundDef>
+        <defName>Shot_EU_SMG</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_SMG_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.30~1.40</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_PAC_SMG</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/PAC_SMG_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.10~1.20</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_AV</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/AV_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.95~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_AVR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Cannon_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.5~1.6</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+  <!-- Assault -->
+
+    <SoundDef>
+        <defName>Shot_EU_AR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Adv_Carbine_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.88~0.98</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_PAC_AR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/PAC_AR_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.90~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_HAR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_HAR_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.90~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_LAR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_SMG_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.86~0.96</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_UBShotgun</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Shotgun_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.10~1.20</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_UBRocket</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/AV_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.50~1.60</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+  <!-- Support -->
+
+    <SoundDef>
+        <defName>Shot_EU_MG</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_MG_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.00~1.06</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_PAC_MG</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/PAC_MG_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.90~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_HMG</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_HAR_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.70~0.80</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_Shotgun</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Shotgun_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>45~50</volumeRange>
+            <pitchRange>0.80~0.90</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+  <!-- Recon -->
+
+    <SoundDef>
+        <defName>Shot_EU_Sniper</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/EU_Sniper_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.95~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_PAC_Sniper</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/PAC_Sniper_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.95~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_Sniper</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Adv_Sniper_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.95~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Shot_Adv_Carbine</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Adv_Carbine_Fire</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>1.12~1.22</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+  <!-- ========= Others ======== -->
+
+    <SoundDef>
+        <defName>Explosion_EMP</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Explosions/Explosion_EMP</clipPath>
+            </li>
+            </grains>
+            <volumeRange>40~50</volumeRange>
+            <pitchRange>0.80~1.90</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Explosion_HAVR</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Explosions/Explosion_EMP</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.80~1.90</pitchRange>
+        </li>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Folder">
+                <clipPath>2142/Explosions/ExplosionMid</clipPath>
+            </li>
+            </grains>
+            <volumeRange>50~80</volumeRange>
+            <pitchRange>0.80~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Explosion_Small</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Folder">
+                <clipPath>2142/Explosions/ExplosionSmall</clipPath>
+            </li>
+            </grains>
+            <volumeRange>30~40</volumeRange>
+            <pitchRange>0.80~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Explosion_Mid</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Folder">
+                <clipPath>2142/Explosions/ExplosionMid</clipPath>
+            </li>
+            </grains>
+            <volumeRange>50~60</volumeRange>
+            <pitchRange>0.80~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Explosion_Huge</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Folder">
+                <clipPath>2142/Explosions/ExplosionHuge</clipPath>
+            </li>
+            </grains>
+            <volumeRange>60~80</volumeRange>
+            <pitchRange>0.80~1.00</pitchRange>
+        </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Interact_BF2142_Gun</defName>  
+        <context>MapOnly</context>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>4</maxSimultaneous>
+        <subSounds>
+        <li>
+            <grains>
+            <li Class="AudioGrain_Clip">
+                <clipPath>2142/Item_Interact</clipPath>
+            </li>
+            </grains>
+            <volumeRange>25~30</volumeRange>
+            <pitchRange>0.80~1.90</pitchRange>
+        </li>
+        </subSounds>
+        
+    </SoundDef>
+
+</Defs>

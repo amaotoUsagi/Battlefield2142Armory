@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== For my Sorting Needs ==================== -->
+  
+    <ThingCategoryDef>
+    	<defName>BF2142_Category</defName>
+    	<label>2142 Armory</label>
+    	<parent>WeaponsRanged</parent>
+    </ThingCategoryDef>
+  
+    <ThingCategoryDef>
+    	<defName>BF2142_Weapons_EU</defName>
+    	<label>European Union</label>
+    	<parent>BF2142_Category</parent>
+    </ThingCategoryDef>
+  
+    <ThingCategoryDef>
+    	<defName>BF2142_Weapons_PAC</defName>
+    	<label>Pan Asian Coalition</label>
+    	<parent>BF2142_Category</parent>
+    </ThingCategoryDef>
+  
+    <ThingCategoryDef>
+    	<defName>BF2142_Armor</defName>
+    	<label>2142 Armor</label>
+    	<parent>ApparelArmor</parent>
+    </ThingCategoryDef>
+  
+    <ThingCategoryDef>
+    	<defName>BF2142_Headgear</defName>
+    	<label>headgear</label>
+    	<parent>BF2142_Armor</parent>
+    </ThingCategoryDef>
+  
+    <!--ThingCategoryDef>
+    	<defName>BF2142_LBE</defName>
+    	<label>loadbearing gear</label>
+    	<parent>BF2142_Armor</parent>
+    </ThingCategoryDef-->
+
+</Defs>

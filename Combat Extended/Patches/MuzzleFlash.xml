@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Muzzle Flash</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+        <operations>
+        
+      <!-- Pistols -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_Pistol"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalshTwo</def>
+                    <drawSize>(1.5,2.5)</drawSize>
+                    <offsets>
+                        <li>(0.45,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_Pistol"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.0,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.45,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- SMG -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_SMG"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalshTwo</def>
+                    <drawSize>(2.0,2.0)</drawSize>
+                    <offsets>
+                        <li>(0.35,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_SMG"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.5)</drawSize>
+                    <offsets>
+                        <li>(0.5,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- Launchers -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_AV"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(2.0,2.0)</drawSize>
+                    <offsets>
+                        <li>(0.75,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_AV"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(2.0,2.0)</drawSize>
+                    <offsets>
+                        <li>(0.75,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_HAVR"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(2.5,2.5)</drawSize>
+                    <offsets>
+                        <li>(1.5,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- AR -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_AR"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(2.0,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.6,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_AR"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.6,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_HAR"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(2.0,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.7,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_LAR"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.5,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_Carbine"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.5,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- MG -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_MG"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(1.25,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.85,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_MG"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.2,1.0)</drawSize>
+                    <offsets>
+                        <li>(1.1,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_HMG"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(2.0,1.0)</drawSize>
+                    <offsets>
+                        <li>(0.95,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- Shotgun -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_Shotgun"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(1.75,1.5)</drawSize>
+                    <offsets>
+                        <li>(0.85,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+      <!-- Sniper -->
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_EU_Sniper"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(1.75,1.25)</drawSize>
+                    <offsets>
+                        <li>(0.95,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_PAC_Sniper"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.25)</drawSize>
+                    <offsets>
+                        <li>(1.1,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+        
+        <li Class="SafePatcher.PatchOperationSetModExtension">
+        <xpath>Defs/ThingDef[defName="BF2142_Adv_Sniper"]</xpath>
+            <value>
+                <li Class="MuzzleFlash.MuzzleFlashProps">
+                    <def>MF_ChargedMuzzleFalsh</def>
+                    <drawSize>(1.5,1.25)</drawSize>
+                    <offsets>
+                        <li>(1.35,0)</li>
+                    </offsets>
+                </li>
+            </value>
+        </li>
+
+        </operations>
+    </match>
+    </Operation>
+
+</Patch>

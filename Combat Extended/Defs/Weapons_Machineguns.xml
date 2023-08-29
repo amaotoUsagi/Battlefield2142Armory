@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== EU ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_MG</defName>
+        <label>Bianchi FA-6</label>
+        <description>The Bianchi FA-6 Light Machine Gun is remarkably effective as a provider of suppressive fire given its all-condition resilience and lengthy firing duration.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_MG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>11.50</Bulk>
+            <Mass>7.70</Mass>
+            <SwayFactor>1.22</SwayFactor>
+            <ShotSpread>0.08</ShotSpread>
+            <SightsEfficiency>1.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+            <WorkToMake>33500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_EU_MG</li>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.40</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+                <burstShotCount>10</burstShotCount>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <warmupTime>1.29</warmupTime>
+                <range>62</range>
+                <soundCast>Shot_EU_MG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <recoilPattern>Mounted</recoilPattern>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>150</magazineSize>
+                <reloadTime>4.9</reloadTime>
+                <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>SuppressFire</aiAimMode>
+                <aimedBurstShotCount>5</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.2,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== PAC ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_MG</defName>
+        <label>Shuko K-80</label>
+        <description>Shooting small, nitrocellulose-molded, caseless ammunition, the Shuko K-80 Light Machine Gun boasts a high magazine capacity and substantial stopping power.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_MG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.6</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>14.25</Bulk>
+            <Mass>11.50</Mass>
+            <SwayFactor>1.67</SwayFactor>
+            <ShotSpread>0.05</ShotSpread>
+            <SightsEfficiency>2.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+            <WorkToMake>33500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_PAC_MG</li>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.15</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_762x54mmCaseless_FMJ</defaultProjectile>
+                <burstShotCount>10</burstShotCount>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <warmupTime>1.39</warmupTime>
+                <range>62</range>
+                <soundCast>Shot_PAC_MG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <recoilPattern>Mounted</recoilPattern>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>200</magazineSize>
+                <reloadTime>4.9</reloadTime>
+                <ammoSet>AmmoSet_762x54mmCaseless</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>SuppressFire</aiAimMode>
+                <aimedBurstShotCount>5</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.3,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== Adv ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_HMG</defName>
+        <label>Ganz HMG</label>
+        <description>Engineered from superlight polymer matter, the Ganz HMG (Heavy Machinegun) is unmatched in power, quality, and consistency of fire.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_HMG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>14.00</Bulk>
+            <Mass>11.00</Mass>
+            <SwayFactor>1.62</SwayFactor>
+            <ShotSpread>0.05</ShotSpread>
+            <SightsEfficiency>1.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+            <WorkToMake>36000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_Adv_MG</li>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.66</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_338Norma_FMJ</defaultProjectile>
+                <burstShotCount>10</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>1.29</warmupTime>
+                <range>62</range>
+                <soundCast>Shot_Adv_HMG</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <recoilPattern>Mounted</recoilPattern>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>120</magazineSize>
+                <reloadTime>4.9</reloadTime>
+                <ammoSet>AmmoSet_338Norma</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>SuppressFire</aiAimMode>
+                <aimedBurstShotCount>5</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.25,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    
+</Defs>

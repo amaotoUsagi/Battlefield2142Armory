@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== EU ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_SMG</defName>
+        <label>Turcotte Rapid SMG</label>
+        <description>Originally used in law enforcement, the Turcotte Rapid SMG was adopted by the EU military forces as a personal defense weapon.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_SMG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>4.15</Bulk>
+            <Mass>1.90</Mass>
+            <SwayFactor>0.84</SwayFactor>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>1.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+            <WorkToMake>31500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>5</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.97</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>0.57</warmupTime>
+                <range>40</range>
+                <soundCast>Shot_EU_SMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>BF2142_EU_SMG</li>
+        </weaponTags>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>26</magazineSize>
+                <reloadTime>4</reloadTime>
+                <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== PAC ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_SMG</defName>
+        <label>Malkov RK-11</label>
+        <description>The Malkov RK-11 is a effective SMG in confined environments, using a high firing rate to ensure multiple impact points.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_SMG</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>6.05</Bulk>
+            <Mass>2.60</Mass>
+            <SwayFactor>0.78</SwayFactor>
+            <ShotSpread>0.18</ShotSpread>
+            <SightsEfficiency>2.07</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <WorkToMake>37500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <Chemfuel>5</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>BF2142_PAC_SMG</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.56</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_545x39mmSoviet_FMJ</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>0.66</warmupTime>
+                <range>40</range>
+                <soundCast>Shot_PAC_SMG</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>30</magazineSize>
+                <reloadTime>4.6</reloadTime>
+                <ammoSet>AmmoSet_545x39mmSoviet</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== Rocket Cases for Mitchell AV-18 and Sudnik VP ========================== -->
+
+	<ThingCategoryDef>
+		<defName>AmmoPK74</defName>
+		<label>PK-74 AR-Rocket</label>
+		<parent>AmmoRockets</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRocket</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_PK74</defName>
+		<label>PK-74 AR-Rocket</label>
+		<ammoTypes>
+			<Ammo_PK74_HE>Bullet_PK74_HE</Ammo_PK74_HE>
+			<Ammo_PK74_HE_VT>Bullet_PK74_HE_VT</Ammo_PK74_HE_VT>
+			<Ammo_PK74_HEDP>Bullet_PK74_HEDP</Ammo_PK74_HEDP>
+			<Ammo_PK74_EMP>Bullet_PK74_EMP</Ammo_PK74_EMP>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="PK74Base" ParentName="MediumAmmoBase" Abstract="True">
+		<description>A compact, specialized case used for launching rockets. Due to how simplified most weaponry made on the Rim, it lacks the guidance package stated in its blueprints.</description>
+		<statBases>
+			<Mass>0.568</Mass>
+			<Bulk>0.43</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_TableMachining</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoPK74</li>
+		</thingCategories>
+		<stackLimit>500</stackLimit>
+		<cookOffFlashScale>20</cookOffFlashScale>
+		<cookOffSound>MortarBomb_Explode</cookOffSound>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="PK74Base">
+		<defName>Ammo_PK74_HE</defName>
+		<label>40x90mm Rocket (HE)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/PK74/PK74_HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10.69</MarketValue>
+		</statBases>
+		<ammoClass>RocketHE</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="PK74Base">
+		<defName>Ammo_PK74_HE_VT</defName>
+		<label>40x90mm Rocket (HE-Airburst)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/PK74/PK74_VT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10.69</MarketValue>
+		</statBases>
+		<ammoClass>GrenadeHETF</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="PK74Base">
+		<defName>Ammo_PK74_HEDP</defName>
+		<label>40x90mm Rocket (HEDP)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/PK74/PK74_HEDP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.8</MarketValue>
+		</statBases>
+		<ammoClass>GrenadeHEDP</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="PK74Base">
+		<defName>Ammo_PK74_EMP</defName>
+		<label>40x90mm Rocket (EMP)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Ammo/PK74/PK74_EMP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>24.41</MarketValue>
+		</statBases>
+		<ammoClass>GrenadeEMP</ammoClass>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="BasePK74Rocket" ParentName="BaseExplosiveBullet" Abstract="true">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>48</speed>
+			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+			<dropsCasings>false</dropsCasings>
+			<airborneSuppressionFactor>0.8</airborneSuppressionFactor>
+			<suppressionFactor>3.0</suppressionFactor>
+			<dangerFactor>2.0</dangerFactor>
+			<soundImpact>Explosion_Small</soundImpact>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BasePK74Rocket">
+		<defName>Bullet_PK74_HE</defName>
+		<label>Micro-rocket (HE)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_ASM_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>71</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>1.5</explosionRadius>
+            <soundExplode>Explosion_Small</soundExplode>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>15</Fragment_Small>
+					<Fragment_Large>3</Fragment_Large>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BasePK74Rocket">
+		<defName>Bullet_PK74_HE_VT</defName>
+		<label>Micro-rocket (HE-Airburst)</label>
+        <thingClass>CombatExtended.ProjectileCE_Bursting</thingClass>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_VT_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>71</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>1.5</explosionRadius>
+            <aimHeightOffset>1.4</aimHeightOffset>
+            <armingDelay>2</armingDelay>
+            <soundExplode>Explosion_Small</soundExplode>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>15</Fragment_Small>
+					<Fragment_Large>3</Fragment_Large>
+				</fragments>
+                <fragAngleRange>-89~-5</fragAngleRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BasePK74Rocket">
+		<defName>Bullet_PK74_HEDP</defName>
+		<label>Micro-rocket (HEDP)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_HEAT_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+    		<damageDef>Bullet</damageDef>
+			<damageAmountBase>60</damageAmountBase>
+			<armorPenetrationSharp>90</armorPenetrationSharp>
+			<armorPenetrationBlunt>13.927</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>46</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>1.4</explosiveRadius>
+				<explosionSound>Explosion_Small</explosionSound>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>2</Fragment_Large>
+					<Fragment_Small>3</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BasePK74Rocket">
+		<defName>Bullet_PK74_EMP</defName>
+		<label>Micro-rocket (EMP)</label>
+		<graphicData>
+			<texPath>BF2142/Things/Projectile/Mitchell_EMP_Projectile</texPath>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>EMP</damageDef>
+			<damageAmountBase>71</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<explosionRadius>3.5</explosionRadius>
+            <soundExplode>Explosion_EMP</soundExplode>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_PK74_HE</defName>
+		<label>make PK-74 AR-Rocket (HE) Rockets x5</label>
+		<description>Craft 5 PK-74 AR-Rocket (HE) Rockets.</description>
+		<jobString>Making PK-74 AR-Rocket (HE) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>58</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_PK74_HE>50</Ammo_PK74_HE>
+		</products>
+		<workAmount>19400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_PK74_HE_VT</defName>
+		<label>make PK-74 AR-Rocket (HE-Airburst) Rockets x5</label>
+		<description>Craft 5 PK-74 AR-Rocket (HE-Airburst) Rockets.</description>
+		<jobString>Making PK-74 AR-Rocket (HE-Airburst) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>58</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_PK74_HE_VT>50</Ammo_PK74_HE_VT>
+		</products>
+		<workAmount>19400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_PK74_HEDP</defName>
+		<label>make PK-74 AR-Rocket (HEDP) Rockets x5</label>
+		<description>Craft 5 PK-74 AR-Rocket (HEDP) Rockets.</description>
+		<jobString>Making PK-74 AR-Rocket (HEDP) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>58</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+                <li>FSX</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_PK74_HEDP>50</Ammo_PK74_HEDP>
+		</products>
+		<workAmount>13800</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="LauncherAmmoRecipeBase">
+		<defName>MakeAmmo_PK74_EMP</defName>
+		<label>make PK-74 AR-Rocket (EMP) Rockets x5</label>
+		<description>Craft 5 PK-74 AR-Rocket (EMP) Rockets.</description>
+		<jobString>Making PK-74 AR-Rocket (EMP) Rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>58</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>34</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_PK74_HEDP>50</Ammo_PK74_HEDP>
+		</products>
+		<workAmount>26200</workAmount>
+	</RecipeDef>
+
+</Defs>

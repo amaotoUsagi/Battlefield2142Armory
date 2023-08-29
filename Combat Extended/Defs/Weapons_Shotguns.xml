@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== Adv ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_Shotgun</defName>
+        <label>Clark 15B</label>
+        <description>The gas-operated Clark 15B Shotgun, produces a circular damage pattern most effective against close-range light armored infantry.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_Shotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <weaponClasses>
+            <li>RangedLight</li>
+            <li>ShortShots</li>
+        </weaponClasses>
+        <statBases>
+            <Bulk>9.89</Bulk>
+            <Mass>3.82</Mass>
+            <SwayFactor>1.40</SwayFactor>
+            <ShotSpread>0.14</ShotSpread>
+            <SightsEfficiency>1.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+            <WorkToMake>5500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>30</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>2.79</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                <ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+                <warmupTime>0.56</warmupTime>
+                <range>16</range>
+                <soundCast>Shot_Adv_Shotgun</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>7</magazineSize>
+                <reloadTime>4.9</reloadTime>
+                <ammoSet>AmmoSet_12Gauge</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiAimMode>Snapshot</aiAimMode>
+            </li>
+        </comps>
+        <weaponTags>
+            <li>BF2142_Adv_Shotgun</li>
+        </weaponTags>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.2,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== EU ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_EU_AR</defName>
+        <label>SCAR-11</label>
+        <description>The combined effort of multiple US and European arms manufacturers, the SCAR 11 has become the standard issue Assault Rifle of the EU due to its robust firepower and performance.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/EU_AR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>8.90</Bulk>
+            <Mass>6.10</Mass>
+            <SwayFactor>1.52</SwayFactor>
+            <ShotSpread>0.11</ShotSpread>
+            <SightsEfficiency>2.12</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <WorkToMake>41000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <Chemfuel>5</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.62</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>1.2</warmupTime>
+                <range>55</range>
+                <soundCast>Shot_EU_AR</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>BF2142_EU_AR</li>
+        </weaponTags>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>30</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_UnderBarrel">
+                <propsUnderBarrel>
+                    <magazineSize>3</magazineSize>
+                    <reloadTime>4.5</reloadTime>
+                    <ammoSet>AmmoSet_PK74</ammoSet>
+                </propsUnderBarrel>
+                <verbPropsUnderBarrel>
+                    <recoilAmount>2.71</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_PK74_HE</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <burstShotCount>1</burstShotCount>
+                    <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+                    <range>44</range>
+                    <soundCast>Shot_Adv_UBRocket</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>5</muzzleFlashScale>
+                </verbPropsUnderBarrel>
+                <propsFireModesUnderBarrel>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                    <aimedBurstShotCount>1</aimedBurstShotCount>
+                </propsFireModesUnderBarrel>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.10,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== PAC ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_PAC_AR</defName>
+        <label>Krylov FA-37</label>
+        <description>The Krylov FA-37 is the standard PAC Assault Rifle that fires a caseless armor-piercing round with considerable recoil due to its light weight and hollow graphite stock.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/PAC_AR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>8.60</Bulk>
+            <Mass>5.50</Mass>
+            <SwayFactor>1.43</SwayFactor>
+            <ShotSpread>0.13</ShotSpread>
+            <SightsEfficiency>2.12</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <WorkToMake>41000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <Chemfuel>5</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>BF2142_PAC_AR</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.72</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_762x54mmCaseless_FMJ</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <warmupTime>1.2</warmupTime>
+                <range>55</range>
+                <soundCast>Shot_PAC_AR</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>30</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_762x54mmCaseless</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_UnderBarrel">
+                <propsUnderBarrel>
+                    <magazineSize>3</magazineSize>
+                    <reloadTime>4.5</reloadTime>
+                    <ammoSet>AmmoSet_PK74</ammoSet>
+                </propsUnderBarrel>
+                <verbPropsUnderBarrel>
+                    <recoilAmount>2.71</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_PK74_HE</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <burstShotCount>1</burstShotCount>
+                    <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+                    <range>44</range>
+                    <soundCast>Shot_Adv_UBRocket</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>5</muzzleFlashScale>
+                </verbPropsUnderBarrel>
+                <propsFireModesUnderBarrel>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                    <aimedBurstShotCount>1</aimedBurstShotCount>
+                </propsFireModesUnderBarrel>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.10,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+  <!-- ==================== Adv ==================== -->
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_HAR</defName>
+        <label>Baur H-AR</label>
+        <description>The Baur H-AR (Heavy Assault Rifle) is a bulked-up edition of the SCAR 11, firing high-caliber, tungsten-core ammunition for maximum damage potential.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_HAR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.4</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>9.50</Bulk>
+            <Mass>6.80</Mass>
+            <SwayFactor>1.65</SwayFactor>
+            <ShotSpread>0.09</ShotSpread>
+            <SightsEfficiency>2.15</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+            <WorkToMake>43000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>60</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <Chemfuel>10</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>BF2142_Adv_AR</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>2.15</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_338Norma_FMJ</defaultProjectile>
+                <burstShotCount>4</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>1.22</warmupTime>
+                <range>55</range>
+                <soundCast>Shot_Adv_HAR</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>20</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_338Norma</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>2</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_UnderBarrel">
+                <propsUnderBarrel>
+                    <magazineSize>3</magazineSize>
+                    <reloadTime>4.5</reloadTime>
+                    <ammoSet>AmmoSet_PK74</ammoSet>
+                </propsUnderBarrel>
+                <verbPropsUnderBarrel>
+                    <recoilAmount>2.71</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_PK74_HE</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <burstShotCount>1</burstShotCount>
+                    <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+                    <range>44</range>
+                    <soundCast>Shot_Adv_UBRocket</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>5</muzzleFlashScale>
+                </verbPropsUnderBarrel>
+                <propsFireModesUnderBarrel>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                    <aimedBurstShotCount>1</aimedBurstShotCount>
+                </propsFireModesUnderBarrel>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>CE_TurretHeavyWeapons</li>
+            </researchPrerequisites>
+        </recipeMaker>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.10,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_LAR</defName>
+        <label>Voss L-AR</label>
+        <description>The Voss L-AR (Light Assault Rifle) uses lower caliber ammunition allowing for a higher volume of cartridges in the clip, enabling prolonged suppressive assault.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_LAR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>8.30</Bulk>
+            <Mass>5.00</Mass>
+            <SwayFactor>1.35</SwayFactor>
+            <ShotSpread>0.1</ShotSpread>
+            <SightsEfficiency>2.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <WorkToMake>41000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+            <Chemfuel>10</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>BF2142_Adv_AR</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.11</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_473x33mmCaseless_FMJ</defaultProjectile>
+                <burstShotCount>10</burstShotCount>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <warmupTime>1.18</warmupTime>
+                <range>55</range>
+                <soundCast>Shot_Adv_LAR</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>6</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>40</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_473x33mmCaseless</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>4</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_UnderBarrel">
+                <propsUnderBarrel>
+                    <magazineSize>3</magazineSize>
+                    <reloadTime>4.5</reloadTime>
+                    <ammoSet>AmmoSet_PK74</ammoSet>
+                </propsUnderBarrel>
+                <verbPropsUnderBarrel>
+                    <recoilAmount>2.71</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_PK74_HE</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <burstShotCount>1</burstShotCount>
+                    <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+                    <range>44</range>
+                    <soundCast>Shot_Adv_UBRocket</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>5</muzzleFlashScale>
+                </verbPropsUnderBarrel>
+                <propsFireModesUnderBarrel>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                    <aimedBurstShotCount>1</aimedBurstShotCount>
+                </propsFireModesUnderBarrel>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBF2142MakeableGun">
+        <defName>BF2142_Adv_Carbine</defName>
+        <label>Lambert Carbine</label>
+        <description>The modernized Lambert Carbine remains the weapon of choice for urban warfare, given its manoeuverability-enhancing compact design and rapid rate of fire.</description>
+        <graphicData>
+            <texPath>BF2142/Things/Weapons/Adv_Carbine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_BF2142_Gun</soundInteract>
+        <statBases>
+            <Bulk>7.20</Bulk>
+            <Mass>2.82</Mass>
+            <SwayFactor>1.02</SwayFactor>
+            <ShotSpread>0.13</ShotSpread>
+            <SightsEfficiency>2.10</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <WorkToMake>37500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>50</Steel>
+            <ComponentIndustrial>7</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>BF2142_Adv_Recon</li>
+        </weaponTags>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.62</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>0.67</warmupTime>
+                <range>44</range>
+                <soundCast>Shot_Adv_Carbine</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>30</magazineSize>
+                <reloadTime>4.5</reloadTime>
+                <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.55</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.00,0.00</DrawOffset>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>
